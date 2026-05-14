@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.takirastreadores.com.br/sitemap.xml
+
+# Bloquear áreas desnecessárias
+Disallow: /wp-admin/
+Disallow: /cgi-bin/

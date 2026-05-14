@@ -1,0 +1,69 @@
+# INSTRUÇÕES PARA O VINI — Subir site Takí Rastreadores na Hostgator
+## Meta&Marketing | takirastreadores.com.br
+
+═══════════════════════════════════════════════════════
+
+## ARQUIVOS PARA SUBIR
+
+Suba TODOS estes arquivos na pasta public_html do cPanel:
+
+  index.html              ← PÁGINA PRINCIPAL (home)
+  gestao-de-frotas.html
+  telemetria.html
+  videotelemetria.html
+  gestao-de-risco.html
+  jornada-motorista.html
+  sobre.html
+  contato.html
+  sitemap.xml             ← Para o Google
+  robots.txt              ← Para o Google
+  google9a829d4374024afb.html  ← Verificação Search Console
+
+═══════════════════════════════════════════════════════
+
+## COMO SUBIR NO CPANEL
+
+1. Acesse o cPanel da Hostgator
+   Usuário: takira45
+   Servidor: br1008.hostgator.com.br
+   Path: /home4/takira45/public_html/
+
+2. Abra o Gerenciador de Arquivos
+
+3. Entre na pasta public_html
+
+4. IMPORTANTE: Faça backup dos arquivos atuais antes!
+   (Selecionar tudo → Comprimir → Salvar como backup_antigo.zip)
+
+5. Suba o arquivo SITE_TAKI_COMPLETO.zip
+
+6. Extraia o ZIP dentro da public_html
+
+7. Confirme que o index.html está na RAIZ da public_html
+
+═══════════════════════════════════════════════════════
+
+## APÓS SUBIR
+
+✅ Testar: https://www.takirastreadores.com.br
+✅ Testar: https://www.takirastreadores.com.br/gestao-de-frotas.html
+✅ Testar: https://www.takirastreadores.com.br/contato.html
+
+Se der erro 404, verificar se os arquivos estão na RAIZ da public_html
+e não dentro de uma subpasta.
+
+═══════════════════════════════════════════════════════
+
+## JÁ INSTALADO NOS ARQUIVOS
+
+✅ Google Tag Manager: GTM-MFBH5D3F
+✅ Google Analytics 4: G-H5SGES566L
+✅ Google Search Console: verificação instalada
+✅ SEO completo: title, description, schema, sitemap
+✅ Área do Cliente: links corretos para os sistemas
+   - Gestão de Frotas: app.takirastreadores.com.br
+   - Gestão de Risco: takirastreadores.movias.com.br/login
+
+═══════════════════════════════════════════════════════
+
+Dúvidas: viviane@metaemarketing.com.br | WhatsApp: 48 98465-5704
