@@ -467,6 +467,44 @@
   text-align: left;
 }
 .services-section .svc-link { align-self: flex-start; }
+
+.home-contact-section {
+  background: var(--offwhite);
+  padding: 72px 48px;
+  overflow-x: hidden;
+}
+.home-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+.home-contact-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.home-contact-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.home-contact-form-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 36px;
+  box-sizing: border-box;
+}
+.home-contact-form-card input,
+.home-contact-form-card textarea,
+.home-contact-form-card button {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 @media (max-width: 700px) {
   .services-grid { grid-template-columns: 1fr; }
 }
@@ -501,6 +539,7 @@ nav.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
 nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 1024px) {
+  html, body { overflow-x: hidden; }
   nav { padding: 0 20px; flex-wrap: wrap; height: auto; min-height: 64px; align-items: center; }
   .nav-toggle { display: flex; margin-left: auto; }
   .nav-end {
@@ -540,10 +579,22 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
   .nav-dropdown:hover .dropdown-menu { display: none; }
   .nav-dropdown.nav-drop-open:hover .dropdown-menu { display: block; }
   .btn-nav-cta { width: 100%; text-align: center; justify-content: center; margin-top: 10px; box-sizing: border-box; }
-  .hero { padding: 48px 24px 40px; min-height: auto; }
-  .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+  .hero { padding: 48px 24px 40px; min-height: auto; overflow-x: hidden; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    width: 100%;
+    min-width: 0;
+  }
+  .hero-inner > * { min-width: 0; max-width: 100%; }
+  .hero-form { width: 100%; box-sizing: border-box; }
   .hero h1 { font-size: 34px; }
   .hero-sub { max-width: 100%; }
+  .home-contact-section { padding: 48px 24px; }
+  .home-contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .home-contact-form-card { padding: 28px 20px; }
+  .home-contact-actions { flex-direction: column; }
+  .home-contact-actions a { width: 100%; justify-content: center; text-align: center; box-sizing: border-box; }
   .trust-bar { padding: 14px 20px; }
   .trust-inner { flex-wrap: wrap; gap: 12px 16px; justify-content: flex-start; }
   .trust-div { display: none; }
@@ -591,6 +642,9 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
   .cta-band-btns { flex-direction: column; }
   .cta-band-btns a { width: 100%; }
   .wpp-float { bottom: 16px; right: 16px; width: 50px; height: 50px; }
+  .home-contact-section { padding: 40px 16px; }
+  .home-contact-form-card { padding: 24px 16px; }
+  .hero { padding: 40px 16px 32px; }
 }
 
 </style>
@@ -1023,9 +1077,9 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
 </section>
 
 <!-- CONTATO -->
-<section style="background: var(--offwhite); padding: 72px 48px;">
+<section class="home-contact-section">
   <div class="section-inner">
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+    <div class="home-contact-grid">
       <div>
         <div class="section-tag">Fale conosco</div>
         <h2 class="section-h2">Entre em contato com a Takí</h2>
@@ -1059,7 +1113,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
             </div>
           </div>
         </div>
-        <div style="display:flex;gap:12px;margin-top:32px;">
+        <div class="home-contact-actions">
           <a href="https://wa.me/5519981433666" target="_blank" rel="noopener" class="btn-wpp">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
             WhatsApp
@@ -1067,7 +1121,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
           <a href="tel:19981433666" class="btn-red">Ligar Agora</a>
         </div>
       </div>
-      <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:36px;">
+      <div class="home-contact-form-card">
         <h3 style="font-size:18px;font-weight:700;color:var(--dark);margin-bottom:6px;">Solicite um orçamento</h3>
         <p style="font-size:13px;color:var(--gray);margin-bottom:24px;">Entraremos em contato em até 1 hora útil</p>
         <div style="display:flex;flex-direction:column;gap:14px;">
