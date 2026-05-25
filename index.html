@@ -285,8 +285,8 @@
   .how-cta { text-align: center; margin-top: 48px; display: flex; gap: 12px; justify-content: center; }
 
   /* ── CTA BAND ── */
-  .cta-band { background: var(--dark); padding: 56px 48px; }
-  .cta-band-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .cta-band { background: var(--dark); padding: 56px 0; }
+  .cta-band-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
   .cta-band h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; color: white; margin-bottom: 6px; }
   .cta-band p { font-size: 15px; color: rgba(255,255,255,.5); }
   .cta-band-btns { display: flex; gap: 12px; flex-shrink: 0; }
@@ -407,7 +407,7 @@
 .human-banner { position: relative; height: 280px; overflow: hidden; }
 .human-banner img { width: 100%; height: 280px; object-fit: cover; display: block; }
 .human-banner-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,10,10,.88) 40%, rgba(26,10,10,.4)); }
-.human-banner-text { position: absolute; z-index: 2; top: 50%; left: 64px; transform: translateY(-50%); max-width: calc(100% - 128px); }
+.human-banner-inner { position: absolute; z-index: 2; top: 50%; left: 0; right: 0; transform: translateY(-50%); max-width: 1100px; margin: 0 auto; padding: 0 48px; box-sizing: border-box; }
 .human-banner-text .section-tag { color: #E6AA2E; margin-bottom: 8px; }
 .human-banner-text h2 { font-family: 'Barlow', sans-serif; font-size: clamp(22px, 2.1vw, 30px); font-weight: 700; color: white; line-height: 1.2; margin-bottom: 12px; white-space: nowrap; }
 .human-banner-text p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.7; margin-bottom: 20px; max-width: 520px; }
@@ -415,8 +415,9 @@
   .human-banner-text h2 { white-space: normal; }
 }
 @media (max-width: 768px) {
-  .human-banner-text { left: 24px; right: 24px; max-width: none; }
+  .human-banner-inner { padding: 0 24px; }
   .human-banner-text h2 { font-size: 22px; }
+  .cta-band-inner { padding: 0 24px; flex-wrap: wrap; }
 }
 
 
@@ -772,11 +773,13 @@
 <div class="human-banner">
   <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80&fit=crop" alt="Frota em rodovia interior SP">
   <div class="human-banner-overlay"></div>
+  <div class="human-banner-inner">
   <div class="human-banner-text">
     <div class="section-tag">Lei 13.103/15</div>
     <h2>Sua empresa está em conformidade com a lei do motorista profissional?</h2>
     <p>Assessoria jurídica especializada está incluída no pacote. Fale com a Takí.</p>
     <a href="jornada-motorista.html" class="btn-red">Saiba mais</a>
+  </div>
   </div>
 </div>
 
@@ -802,11 +805,13 @@
 <div class="human-banner">
   <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&q=80&fit=crop" alt="Equipe Takí Rastreadores">
   <div class="human-banner-overlay"></div>
+  <div class="human-banner-inner">
   <div class="human-banner-text">
     <div class="section-tag">Nossa equipe</div>
     <h2>Fundada por especialistas. Conduzida por pessoas.</h2>
     <p>Paulo e Eduardo — donos da empresa — são os mesmos que atendem, instalam e treinam. Você nunca vai falar com um intermediário na Takí.</p>
     <a href="sobre.html" class="btn-red">Conheça nossa história</a>
+  </div>
   </div>
 </div>
 
