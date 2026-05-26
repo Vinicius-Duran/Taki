@@ -176,16 +176,17 @@
     border-radius: 8px;
     padding: 28px 24px;
   }
-  .hero-form h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 4px; }
-  .hero-form p { font-size: 12px; color: rgba(255,255,255,.45); margin-bottom: 20px; }
+  .hero-form h3 { font-size: 16px; font-weight: 700; color: var(--red); margin-bottom: 4px; }
+  .hero-form p { font-size: 12px; color: rgba(255,255,255,.62); margin-bottom: 20px; }
   .form-field { margin-bottom: 12px; }
-  .form-field label { font-size: 11px; color: rgba(255,255,255,.5); display: block; margin-bottom: 4px; }
+  .form-field label { font-size: 11px; color: rgba(255,255,255,.78); display: block; margin-bottom: 4px; }
   .form-field input, .form-field select {
-    width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
-    color: rgba(255,255,255,.8); font-size: 13px; font-family: 'Barlow', sans-serif;
+    width: 100%; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2);
+    color: rgba(255,255,255,.95); font-size: 13px; font-family: 'Barlow', sans-serif;
     padding: 9px 12px; border-radius: 4px; outline: none;
   }
-  .form-field select option { background: var(--dark); }
+  .form-field input::placeholder { color: rgba(255,255,255,.48); }
+  .form-field select option { background: var(--dark); color: #fff; }
   a.form-submit { text-decoration: none; display: block; text-align: center; box-sizing: border-box; }
   .form-submit { width: 100%; background: var(--red); color: white; font-size: 14px; font-weight: 700; padding: 11px; border-radius: 4px; border: none; cursor: pointer; margin-top: 4px; font-family: 'Barlow', sans-serif; }
 
@@ -288,7 +289,7 @@
 
   /* ── CTA BAND ── */
   .cta-band { background: var(--dark); padding: 56px 0; }
-  .cta-band-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .cta-band-inner { width: min(1100px, calc(100% - 96px)); max-width: 1100px; margin: 0 auto; padding: 0; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
   .cta-band h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; color: white; margin-bottom: 6px; }
   .cta-band p { font-size: 15px; color: rgba(255,255,255,.5); }
   .cta-band-btns { display: flex; gap: 12px; flex-shrink: 0; }
@@ -305,14 +306,14 @@
   .footer-inner { max-width: 1100px; margin: 0 auto; }
   .footer-top { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.06); }
   .footer-brand img { height: 44px; width: auto; display: inline-block; margin-bottom: 12px; clip-path: inset(1px 0 4px 0); padding: 6px 12px; box-sizing: content-box; background: #fff; border-radius: 6px; border: none; box-shadow: none; }
-  .footer-brand p { font-size: 13px; color: rgba(255,255,255,.35); line-height: 1.7; max-width: 240px; }
+  .footer-brand p { font-size: 13px; color: rgba(255,255,255,.58); line-height: 1.7; max-width: 240px; }
   .social-row { display: flex; gap: 8px; margin-top: 20px; }
-  .social-btn { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
-  .footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 16px; }
-  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,.3); text-decoration: none; margin-bottom: 10px; }
-  .footer-col a:hover { color: rgba(255,255,255,.7); }
+  .social-btn { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.18); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+  .footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.68); margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,.55); text-decoration: none; margin-bottom: 10px; }
+  .footer-col a:hover { color: rgba(255,255,255,.9); }
   .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; }
-  .footer-bottom p { font-size: 11px; color: rgba(255,255,255,.2); }
+  .footer-bottom p { font-size: 11px; color: rgba(255,255,255,.45); }
 
   /* ── WPP FLOAT ── */
   .wpp-float {
@@ -409,7 +410,7 @@
 .human-banner { position: relative; height: 280px; overflow: hidden; }
 .human-banner img { width: 100%; height: 280px; object-fit: cover; display: block; }
 .human-banner-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,10,10,.88) 40%, rgba(26,10,10,.4)); }
-.human-banner-inner { position: absolute; z-index: 2; top: 50%; left: 0; right: 0; transform: translateY(-50%); max-width: 1100px; margin: 0 auto; padding: 0 48px; box-sizing: border-box; }
+.human-banner-inner { position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(1100px, calc(100% - 96px)); max-width: 1100px; padding: 0; box-sizing: border-box; }
 .human-banner-text .section-tag { color: #E6AA2E; margin-bottom: 8px; }
 .human-banner-text h2 { font-family: 'Barlow', sans-serif; font-size: clamp(22px, 2.1vw, 30px); font-weight: 700; color: white; line-height: 1.2; margin-bottom: 12px; white-space: nowrap; }
 .human-banner-text p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.7; margin-bottom: 20px; max-width: 520px; }
@@ -417,9 +418,8 @@
   .human-banner-text h2 { white-space: normal; }
 }
 @media (max-width: 768px) {
-  .human-banner-inner { padding: 0 24px; }
   .human-banner-text h2 { font-size: 22px; }
-  .cta-band-inner { padding: 0 24px; flex-wrap: wrap; }
+  .cta-band-inner { flex-wrap: wrap; }
 }
 
 
@@ -608,7 +608,8 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
   .stats-grid, .impact-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .cta-band { padding: 40px 0; }
-  .cta-band-inner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 0 24px; }
+  .cta-band-inner { width: min(1100px, calc(100% - 48px)); flex-direction: column; align-items: flex-start; gap: 20px; }
+  .human-banner-inner { width: min(1100px, calc(100% - 48px)); }
   .cta-band-btns { flex-wrap: wrap; width: 100%; }
   .cta-band h2 { font-size: 26px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -616,7 +617,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
   .how-cta { flex-direction: column; align-items: stretch; }
   .human-banner { height: auto; min-height: 0; }
   .human-banner img { height: 220px; min-height: 220px; }
-  .human-banner-inner { position: relative; top: auto; left: auto; right: auto; transform: none; padding: 28px 24px; }
+  .human-banner-inner { position: relative; top: auto; left: auto; right: auto; transform: none; margin: 0 auto; padding: 28px 0; }
   .human-banner-overlay { background: linear-gradient(180deg, rgba(26,10,10,.92) 0%, rgba(26,10,10,.78) 100%); }
   .human-banner-text h2 { white-space: normal; font-size: 22px; }
   .human-banner-text p { max-width: 100%; }
@@ -771,13 +772,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
       <a href="jornada-motorista.html">
         <div class="dropdown-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#DE3934" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg></div>
         <div><div style="font-weight:600;color:#111;">Jornada do Motorista</div><div style="font-size:11px;color:#888;margin-top:1px;">Controle eletrônico de jornada</div></div>
-      </a>
-        <hr class="dropdown-divider">
-      <a href="gestao-de-risco.html">
-        <div class="dropdown-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#DE3934" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div><div style="font-weight:600;color:#111;">Gestão de Risco</div><div style="font-size:11px;color:#888;margin-top:1px;">Homologado em seguradoras</div></div>
-      </a>
-      </div>
+      </a></div>
       </div>
       <div class="nav-sep"></div>
       <div class="nav-dropdown">
@@ -789,12 +784,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
       <a href="https://app.takirastreadores.com.br/" target="_blank" rel="noopener" class="dropdown-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         Gestão de Frotas
-      </a>
-      <a href="https://takirastreadores.movias.com.br/login" target="_blank" rel="noopener" class="dropdown-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Gestão de Risco
-      </a>
-      </div>
+      </a></div>
       </div>
       <a href="contato.html">Contato</a>
     </div>
@@ -1168,8 +1158,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
         <a href="telemetria.html">Telemetria</a>
         <a href="videotelemetria.html">Videotelemetria</a>
         <a href="jornada-motorista.html">Jornada do Motorista</a>
-        <a href="gestao-de-risco.html">Gestão de Risco</a>
-      </div>
+</div>
       <div class="footer-col">
         <h5>Empresa</h5>
         <a href="sobre.html">Sobre Nós</a>

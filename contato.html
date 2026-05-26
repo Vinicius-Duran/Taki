@@ -172,16 +172,17 @@ body { font-family: 'Ubuntu', sans-serif; color: var(--body-color); background: 
  border-radius: 8px;
  padding: 28px 24px;
  }
- .hero-form h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 4px; }
- .hero-form p { font-size: 12px; color: rgba(255,255,255,.45); margin-bottom: 20px; }
+ .hero-form h3 { font-size: 16px; font-weight: 700; color: var(--red); margin-bottom: 4px; }
+ .hero-form p { font-size: 12px; color: rgba(255,255,255,.62); margin-bottom: 20px; }
  .form-field { margin-bottom: 12px; }
- .form-field label { font-size: 11px; color: rgba(255,255,255,.5); display: block; margin-bottom: 4px; }
+ .form-field label { font-size: 11px; color: rgba(255,255,255,.78); display: block; margin-bottom: 4px; }
  .form-field input, .form-field select {
- width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
- color: rgba(255,255,255,.8); font-size: 13px; font-family: 'Barlow', sans-serif;
+ width: 100%; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2);
+ color: rgba(255,255,255,.95); font-size: 13px; font-family: 'Barlow', sans-serif;
  padding: 9px 12px; border-radius: 4px; outline: none;
  }
- .form-field select option { background: var(--dark); }
+ .form-field input::placeholder { color: rgba(255,255,255,.48); }
+  .form-field select option { background: var(--dark); color: #fff; }
  .form-submit { width: 100%; background: var(--red); color: white; font-size: 14px; font-weight: 700; padding: 11px; border-radius: 4px; border: none; cursor: pointer; margin-top: 4px; font-family: 'Barlow', sans-serif; }
 
  /* ── TRUST BAR ── */
@@ -246,14 +247,14 @@ body { font-family: 'Ubuntu', sans-serif; color: var(--body-color); background: 
  footer { background: var(--dark2); padding: 60px 48px 32px; }
  .footer-inner { max-width: 1100px; margin: 0 auto; }
  .footer-top { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.06); }
- .footer-brand p { font-size: 13px; color: rgba(255,255,255,.35); line-height: 1.7; max-width: 240px; }
+ .footer-brand p { font-size: 13px; color: rgba(255,255,255,.58); line-height: 1.7; max-width: 240px; }
  .social-row { display: flex; gap: 8px; margin-top: 20px; }
  .social-btn { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
- .footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 16px; }
- .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,.3); text-decoration: none; margin-bottom: 10px; }
- .footer-col a:hover { color: rgba(255,255,255,.7); }
+ .footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.68); margin-bottom: 16px; }
+ .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,.55); text-decoration: none; margin-bottom: 10px; }
+ .footer-col a:hover { color: rgba(255,255,255,.9); }
  .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; }
- .footer-bottom p { font-size: 11px; color: rgba(255,255,255,.2); }
+ .footer-bottom p { font-size: 11px; color: rgba(255,255,255,.45); }
 
  /* ── WPP FLOAT ── */
  .wpp-float {
@@ -372,14 +373,14 @@ section { padding: 72px 48px; }
 footer { background: var(--dark2); padding: 60px 48px 28px; }
 .footer-top { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.07); }
 .footer-brand img { height: 44px; width: auto; margin-bottom: 16px; clip-path: inset(1px 0 4px 0); display: inline-block; padding: 6px 12px; box-sizing: content-box; background: #fff; border-radius: 6px; border: none; box-shadow: none; }
-.footer-brand p { font-family: 'Ubuntu', sans-serif; font-size: 13px; color: rgba(255,255,255,.35); line-height: 1.7; max-width: 240px; }
+.footer-brand p { font-family: 'Ubuntu', sans-serif; font-size: 13px; color: rgba(255,255,255,.58); line-height: 1.7; max-width: 240px; }
 .social-row { display: flex; gap: 8px; margin-top: 18px; }
 .social-btn { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
-.footer-col h5 { font-family: 'Ubuntu', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 16px; }
-.footer-col a { display: block; font-family: 'Ubuntu', sans-serif; font-size: 13px; color: rgba(255,255,255,.3); text-decoration: none; margin-bottom: 10px; transition: color .2s; }
-.footer-col a:hover { color: rgba(255,255,255,.7); }
+.footer-col h5 { font-family: 'Ubuntu', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.68); margin-bottom: 16px; }
+.footer-col a { display: block; font-family: 'Ubuntu', sans-serif; font-size: 13px; color: rgba(255,255,255,.55); text-decoration: none; margin-bottom: 10px; transition: color .2s; }
+.footer-col a:hover { color: rgba(255,255,255,.9); }
 .footer-bottom { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 22px; }
-.footer-bottom p { font-family: 'Ubuntu', sans-serif; font-size: 11px; color: rgba(255,255,255,.2); }
+.footer-bottom p { font-family: 'Ubuntu', sans-serif; font-size: 11px; color: rgba(255,255,255,.45); }
 
 /* WPP FLOAT */
 .wpp-float { position: fixed; bottom: 28px; right: 28px; background: var(--wpp); color: white; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.4); z-index: 999; cursor: pointer; text-decoration: none; }
@@ -996,13 +997,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
    <a href="jornada-motorista.html">
     <div class="dropdown-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#DE3934" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg></div>
     <div><div style="font-weight:600;color:#111;">Jornada do Motorista</div><div style="font-size:11px;color:#888;margin-top:1px;">Controle eletrônico de jornada</div></div>
-   </a>
-    <hr class="dropdown-divider">
-   <a href="gestao-de-risco.html">
-    <div class="dropdown-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#DE3934" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-    <div><div style="font-weight:600;color:#111;">Gestão de Risco</div><div style="font-size:11px;color:#888;margin-top:1px;">Homologado em seguradoras</div></div>
-   </a>
-   </div>
+   </a></div>
    </div>
    <div class="nav-sep"></div>
    <div class="nav-dropdown">
@@ -1014,12 +1009,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
    <a href="https://app.takirastreadores.com.br/" target="_blank" rel="noopener" class="dropdown-item">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
     Gestão de Frotas
-   </a>
-   <a href="https://takirastreadores.movias.com.br/login" target="_blank" rel="noopener" class="dropdown-item">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    Gestão de Risco
-   </a>
-   </div>
+   </a></div>
    </div>
    <a href="contato.html">Contato</a>
   </div>
@@ -1170,8 +1160,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
             <option>Gestão de Frotas</option>
             <option>Telemetria</option>
             <option>Videotelemetria</option>
-            <option>Gestão de Risco / Homologação</option>
-            <option>Jornada do Motorista</option>
+                        <option>Jornada do Motorista</option>
             <option>Não sei / quero orientação</option>
           </select>
         </div>
@@ -1229,12 +1218,12 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
         <h3>Videotelemetria</h3>
         <p>Câmeras embarcadas e análise de comportamento</p>
       </a>
-      <a href="gestao-de-risco.html" class="svc-strip-card">
-        <div class="svc-strip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DE3934" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Gestão de Risco</h3>
-        <p>Homologado em seguradoras e gestoras de risco</p>
+      <a href="jornada-motorista.html" class="svc-strip-card">
+        <div class="svc-strip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DE3934" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg></div>
+        <h3>Jornada do Motorista</h3>
+        <p>Controle eletrônico de jornada e compliance</p>
       </a>
-    </div>
+</div>
   </div>
 </section>
 
@@ -1264,8 +1253,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
         <a href="telemetria.html">Telemetria</a>
         <a href="videotelemetria.html">Videotelemetria</a>
         <a href="jornada-motorista.html">Jornada do Motorista</a>
-        <a href="gestao-de-risco.html">Gestão de Risco</a>
-    </div>
+</div>
     <div class="footer-col">
       <h5>Empresa</h5>
       <a href="sobre.html">Sobre Nós</a>
