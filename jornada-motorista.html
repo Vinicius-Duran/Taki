@@ -67,8 +67,8 @@ body { font-family: 'Ubuntu', sans-serif; color: var(--body-color); background: 
  z-index: 100;
  box-shadow: 0 2px 12px rgba(0,0,0,.06);
  }
- .nav-logo { display: inline-flex; align-items: center; background: #FFFFFF; padding: 6px 12px; border-radius: 6px; text-decoration: none; color: inherit; }
- .nav-logo img { clip-path: inset(1px 0 4px 0); }
+ .nav-logo { display: inline-flex; align-items: center; text-decoration: none; color: inherit; }
+ .nav-logo img { height: 58px; width: auto; display: block; }
  .nav-end { display: flex; align-items: center; gap: 12px; margin-left: auto; }
  .nav-links { display: flex; gap: 2px; align-items: center; }
  .nav-links > a, .nav-dropdown > .nav-dropbtn {
@@ -378,7 +378,7 @@ section { padding: 72px 48px; }
 /* FOOTER */
 footer { background: var(--dark2); padding: 60px 48px 28px; }
 .footer-top { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.07); }
-.footer-brand img { height: 44px; width: auto; margin-bottom: 16px; clip-path: inset(1px 0 4px 0); display: inline-block; padding: 6px 12px; box-sizing: content-box; background: #fff; border-radius: 6px; border: none; box-shadow: none; }
+.footer-brand img { height: 74px; width: auto; display: block; margin-bottom: 6px; }
 .footer-brand p { font-family: 'Ubuntu', sans-serif; font-size: 13px; color: rgba(255,255,255,.58); line-height: 1.7; max-width: 240px; }
 .social-row { display: flex; gap: 8px; margin-top: 18px; }
 .social-btn { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
@@ -608,7 +608,7 @@ body { font-family: 'Ubuntu', sans-serif; color: #4A5568; background: #fff; line
 /* ── FOOTER ── */
 footer { background: var(--dark2, #110605); padding: 56px 48px 24px; }
 .footer-top { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.05); }
-.footer-brand img { height: 44px; width: auto; display: inline-block; margin-bottom: 14px; clip-path: inset(1px 0 4px 0); padding: 6px 12px; box-sizing: content-box; background: #fff; border-radius: 6px; border: none; box-shadow: none; }
+.footer-brand img { height: 74px; width: auto; display: block; margin-bottom: 6px; }
 .footer-brand p { font-size: 12px; color: rgba(255,255,255,.58); line-height: 1.7; max-width: 220px; }
 .social-row { display: flex; gap: 8px; margin-top: 16px; }
 .social-btn { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,.18); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
@@ -770,7 +770,7 @@ section { padding: 72px 48px; }
 /* FOOTER */
 footer { background: var(--dark2); padding: 60px 48px 28px; }
 .footer-top { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.07); }
-.footer-brand img { height: 44px; width: auto; margin-bottom: 16px; clip-path: inset(1px 0 4px 0); display: inline-block; padding: 6px 12px; box-sizing: content-box; background: #fff; border-radius: 6px; border: none; box-shadow: none; }
+.footer-brand img { height: 74px; width: auto; display: block; margin-bottom: 6px; }
 .footer-brand p { font-family: 'Ubuntu', sans-serif; font-size: 13px; color: rgba(255,255,255,.58); line-height: 1.7; max-width: 240px; }
 .social-row { display: flex; gap: 8px; margin-top: 18px; }
 .social-btn { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
@@ -1173,7 +1173,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
 
 <nav>
  <a href="index.html" class="nav-logo" aria-label="Início">
-  <img src="images/logo-taki.png" alt="Takí Rastreadores" style="height:44px; width:auto; display:block;">
+  <img src="images/logo-taki.png" alt="Takí Rastreadores">
  </a>
  <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
  <div class="nav-end">
@@ -1576,7 +1576,7 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="images/logo-taki.png" alt="Takí Rastreadores">
+      <img src="images/logo-taki-branco.png" alt="Takí Rastreadores">
       <p>Rastreamento, telemetria e gestão de frotas para empresas no interior de São Paulo. Tecnologia de ponta com atendimento humano.</p>
       <div class="social-row">
         <div class="social-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(255,255,255,0.3)" stroke="none"/></svg></div>
