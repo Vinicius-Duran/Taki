@@ -189,6 +189,11 @@
   .form-field select option { background: var(--dark); color: #fff; }
   a.form-submit { text-decoration: none; display: block; text-align: center; box-sizing: border-box; }
   .form-submit { width: 100%; background: var(--red); color: white; font-size: 14px; font-weight: 700; padding: 11px; border-radius: 4px; border: none; cursor: pointer; margin-top: 4px; font-family: 'Barlow', sans-serif; }
+  .form-submit:disabled { opacity: 0.7; cursor: wait; }
+  .taki-form-status { font-family: 'Ubuntu', sans-serif; font-size: 13px; margin: 12px 0 0; line-height: 1.5; }
+  .taki-form-status--ok { color: #15803d; }
+  .taki-form-status--error { color: #b91c1c; }
+  .taki-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
 
   /* ── TRUST BAR ── */
   .trust-bar { background: white; border-bottom: 1px solid var(--border); padding: 16px 48px; }
@@ -841,25 +846,29 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
         <div><div class="stat-n">10+</div><div class="stat-l">anos de<br>experiência</div></div>
       </div>
     </div>
-    <div class="hero-form">
+    <form class="hero-form taki-lead-form" action="enviar-formulario.php" method="post" data-origem="index-hero">
+      <input type="hidden" name="origem" value="index-hero">
+      <div class="taki-honeypot" aria-hidden="true">
+        <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
       <h3>Fale com um consultor</h3>
       <p>Sem compromisso — resposta em minutos</p>
       <div class="form-field">
-        <label>Nome completo</label>
-        <input type="text" placeholder="Seu nome">
+        <label for="hero-nome">Nome completo</label>
+        <input type="text" id="hero-nome" name="nome" placeholder="Seu nome" data-required>
       </div>
       <div class="form-field">
-        <label>Empresa</label>
-        <input type="text" placeholder="Nome da empresa">
+        <label for="hero-empresa">Empresa</label>
+        <input type="text" id="hero-empresa" name="empresa" placeholder="Nome da empresa" data-required>
       </div>
       <div class="form-field">
-        <label>Telefone / WhatsApp</label>
-        <input type="text" placeholder="(00) 00000-0000">
+        <label for="hero-telefone">Telefone / WhatsApp</label>
+        <input type="tel" id="hero-telefone" name="telefone" placeholder="(00) 00000-0000" data-required>
       </div>
       <div class="form-field">
-        <label>Quantidade de veículos</label>
-        <select>
-          <option>Selecione a faixa da frota</option>
+        <label for="hero-veiculos">Quantidade de veículos</label>
+        <select id="hero-veiculos" name="veiculos">
+          <option value="">Selecione a faixa da frota</option>
           <option>3 a 10 veículos</option>
           <option>10 a 50 veículos</option>
           <option>50 a 100 veículos</option>
@@ -867,15 +876,17 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
         </select>
       </div>
       <div class="form-field">
-        <label>Serviço de interesse principal</label>
-        <select>
-          <option>Selecione o serviço</option>
+        <label for="hero-servico">Serviço de interesse principal</label>
+        <select id="hero-servico" name="servico">
+          <option value="">Selecione o serviço</option>
           <option>Gestão de Frotas</option>
           <option>Jornada do Motorista</option>
+          <option>Telemetria</option>
+          <option>Videotelemetria</option>
         </select>
       </div>
-      <a href="contato.html" class="form-submit" role="button">Solicitar Orçamento Gratuito</a>
-    </div>
+      <button type="submit" class="form-submit">Solicitar Orçamento Gratuito</button>
+    </form>
   </div>
 </div>
 
@@ -1133,29 +1144,33 @@ nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(
           <a href="tel:19997429908" class="btn-red">Ligar Agora</a>
         </div>
       </div>
-      <div class="home-contact-form-card">
+      <form class="home-contact-form-card taki-lead-form" action="enviar-formulario.php" method="post" data-origem="index-contato">
+        <input type="hidden" name="origem" value="index-contato">
+        <div class="taki-honeypot" aria-hidden="true">
+          <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
         <h3 style="font-size:18px;font-weight:700;color:var(--dark);margin-bottom:6px;">Solicite um orçamento</h3>
         <p style="font-size:13px;color:var(--gray);margin-bottom:24px;">Entraremos em contato em até 1 hora útil</p>
         <div style="display:flex;flex-direction:column;gap:14px;">
           <div>
-            <label style="font-size:12px;color:var(--gray);display:block;margin-bottom:5px;font-weight:600;">Nome completo *</label>
-            <input type="text" placeholder="Seu nome" style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;">
+            <label style="font-size:12px;color:var(--gray);display:block;margin-bottom:5px;font-weight:600;" for="home-nome">Nome completo *</label>
+            <input type="text" id="home-nome" name="nome" placeholder="Seu nome" data-required style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;">
           </div>
           <div>
-            <label style="font-size:12px;color:var(--gray);display:block;margin-bottom:5px;font-weight:600;">Empresa *</label>
-            <input type="text" placeholder="Nome da empresa" style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;">
+            <label style="font-size:12px;color:var(--gray);display:block;margin-bottom:5px;font-weight:600;" for="home-empresa">Empresa *</label>
+            <input type="text" id="home-empresa" name="empresa" placeholder="Nome da empresa" data-required style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;">
           </div>
           <div>
-            <label style="font-size:12px;color:var(--gray);display:block;margin-bottom:5px;font-weight:600;">Telefone *</label>
-            <input type="text" placeholder="(19) 99742-9908" style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;">
+            <label style="font-size:12px;color:var(--gray);display:block;margin-bottom:5px;font-weight:600;" for="home-telefone">Telefone *</label>
+            <input type="tel" id="home-telefone" name="telefone" placeholder="(19) 99742-9908" data-required style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;">
           </div>
           <div>
-            <label style="font-size:12px;color:var(--gray);display:block;margin-bottom:5px;font-weight:600;">Mensagem</label>
-            <textarea placeholder="Conte sobre sua frota e o que precisa..." style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;resize:vertical;min-height:88px;"></textarea>
+            <label style="font-size:12px;color:var(--gray);display:block;margin-bottom:5px;font-weight:600;" for="home-mensagem">Mensagem</label>
+            <textarea id="home-mensagem" name="mensagem" placeholder="Conte sobre sua frota e o que precisa..." style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;resize:vertical;min-height:88px;"></textarea>
           </div>
-          <button style="background:var(--red);color:white;font-size:15px;font-weight:700;padding:13px;border-radius:6px;border:none;cursor:pointer;font-family:'Barlow',sans-serif;">Enviar Mensagem</button>
+          <button type="submit" style="background:var(--red);color:white;font-size:15px;font-weight:700;padding:13px;border-radius:6px;border:none;cursor:pointer;font-family:'Barlow',sans-serif;">Enviar Mensagem</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </section>
@@ -1237,7 +1252,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   // Track submit de formulário
-  var forms = document.querySelectorAll('form, .hero-form');
+  var forms = document.querySelectorAll('form:not(.taki-lead-form), .hero-form:not(.taki-lead-form)');
   forms.forEach(function(form) {
     form.addEventListener('submit', function() {
       window.dataLayer = window.dataLayer || [];
@@ -1246,6 +1261,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+<script src="js/taki-forms.js"></script>
 <script>
 (function () {
   document.querySelectorAll('nav').forEach(function (nav) {
